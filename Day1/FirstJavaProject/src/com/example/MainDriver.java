@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.classes.ExampleClass;
 import com.example.methods.MethodsAndStuff;
 
 public class MainDriver {
@@ -68,9 +69,30 @@ public class MainDriver {
 		//stuff is a method of apple object, which belongs to the Kiwi class, which belongs to methodsandstuff package
 	
 		
+		ExampleClass obj1 = new ExampleClass();
+		obj1.aMethod();
+		obj1.dance(12);
+		
+		obj1.name = "Bob";
+		obj1.booleanValue = true;
+		obj1.wholeNumber = 2;
+		
+		System.out.println(obj1.name); //null
+		System.out.println(obj1.booleanValue); //false
+		System.out.println(obj1.wholeNumber); //0
 		
 			
+		obj1 = new ExampleClass(12,"Frank"); //obj1 has been rewritten with a new object. 
+		
+		System.out.println(obj1.name); //null
+		System.out.println(obj1.booleanValue); //false
+		System.out.println(obj1.wholeNumber); //0
+		
+		obj1.aMethod();
 		
 		
+		//Access Modifiers
+		//Variables Scopes
+		// Array (how's it differnt to JavaScript)
 	}
 }
