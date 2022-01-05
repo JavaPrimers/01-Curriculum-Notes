@@ -44,7 +44,7 @@ public class ExampleClass {
 		this.wholeNumber = 0;
 	}
 	
-	//overloading
+	//overloading - example of polymorphsism
 	public ExampleClass(int number) {
 		this.wholeNumber = number;
 	}

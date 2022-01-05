@@ -4,6 +4,7 @@ public class SolutionClass {
 
 	
 	public int[] bubbleSortMethod(int[] integerArray) {
+		
 		return null;
 	}
 }
