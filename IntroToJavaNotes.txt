@@ -1,0 +1,45 @@
+
+What is Java?
+
+	Semi Object Oriented Programming language that was created by James Gosling 
+	Object Oriented programming has 4 pillars, inheritance, encapsulation, abstraction and Polymorphism
+	(Almost) Everything is a class - except for primitives
+
+	Java is a high-level, compiled, strongly typed OOP language.
+
+Advantages of Java?
+	
+	The syntax is C-language inspired. 
+	Platform independent 
+	Automatic Memory Management
+	Open Source
+	Extensive built-in libraries (as well as a lot of external libraries and frameworks)
+	Supported by Oracle 
+
+
+What do I need to develop Java applications?
+	JDK - Java Development Kit 
+	JDK contains everything we need to build, compile and run Java code. 
+
+What do I need to *run* Java application?
+	JRE - Java Runtime Environment. 
+	JRE allows us to run Java applications, that's all thanks to the JVM. 
+
+What is the JVM?
+	The JVM is JAva Virtual Machine. JVM will translate our bytecode into machine code. 
+	(Thanks to the JVM that we have platform independence)
+
+
+	Java being platform independent means that Java programs are not constrained to a single 
+	operating system - Java code can be run on many different systems. Java program can be written 
+	in any one of these operating systems and then *compiled* into *bytecode*.
+	(WORA - Write Once Run Anywhere)
+
+	The JVM can then translate the bytecode into any OS/machine specific code. Many operating 
+	systems have their own JVM. 
+
+	In order to run Java applications, we actually need the JRE. The JRE contains core libraries
+	that we levarage as well as contain the JVM. All you need to run Java code is a JRE. 
+
+
+
