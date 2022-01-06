@@ -4,6 +4,12 @@ import com.revature.animalkingdom.Animal;
 import com.revature.animalkingdom.Dog;
 import com.revature.animalkingdom.GermanShepard;
 import com.revature.bank.Account;
+import com.revature.vehicle.BensCar;
+import com.revature.vehicle.Car;
+import com.revature.vehicle.CompletedCar;
+import com.revature.vehicle.PhongsCar;
+import com.revature.vehicle.ToyotaCar;
+import com.revature.vehicle.Truck;
 
 public class MainDriver {
 	
@@ -15,6 +21,15 @@ public class MainDriver {
 	 * 
 	 * 		In Java we use extends keywords (for homogenous) inheritance:
 	 * 			class -> class
+	 * 			interface -> interface
+	 * 			abstract class -> class
+	 * 			class -> abstract class
+	 * 			
+	 * 
+	 * 		For hetrogenous inheritance we use implements: 
+	 * 			interface -> class 
+	 * 			interface -> Abstract class
+	 * 			
 	 * 
 	 * 		In Java, we have support for multilevel inheritance but not multiple parents.
 	 * 		
@@ -60,9 +75,53 @@ public class MainDriver {
 	 * 
 	 * 			To fully achieve encapsulation, we restrict direct access via the private keyword and 
 	 * 			provide indirect access via public methods (getters and setters). 
+	 * 
+	 * Abstraction: 
+	 * 			Related to complex. 
+	 * 			Taking a concept, putting it in a way thats understandable. 
+	 * 
+	 * 			Programming: 
+	 * 			The concept of hiding implementation to show functionality. 
+	 * 			IRL, similar to a car. Different car manufacturers have different ways they 
+	 * 			make cars, that function as cars. 
+	 * 
+	 * 			In Java we use 2 entities, Abstract classes and interfaces to achieve abstraction
+	 * 			(partial and complete abstraction)
+	 * 
+	 * 			What the heck are abstract methods?
+	 * 				Abstract methods are designed to be overridden! For a child class to override the 
+	 * 				parent abstract method and provide an implementation. 
+	 * 			
+	 * 				If a child class does not implement ALL abstract methods, then it too must be a 
+	 * 				ABSTRACT class.
+	 * 
+	 * 				Abstract methods cannot be final or static. 
+	 * 
+	 * 			Interfaces: 
+	 * 				REALLY DIFFERENT TO CLASSES	
+	 * 				Interfaces don't have constructors! (You cannot directly instantiate a interface)
+	 * 				Implicitly: 
+	 * 					All Methods are public and abstract. 
+	 * 					variable are public static final
+	 * 				Classes can implement multiple interfaces. 
+	 * 				CANNOT BE STATIC or FINAL.
+	 * 
+	 * 			Abstract Classes are a lot closer to classes: 
+	 * 				They have constructors (like classes)
+	 * 				They can have attributes/states (like classes)
+	 * 				They can have concrete methods (like classes)
+	 * 
+	 * 				An abstract classes does NOT need an abstract method to be abstract. 
+	 * 				BUT if the class has an abstract method, then the class MUST be abstract. 
+	 * 
+	 * 				Abstract classes, even though have constructors, cannot be instantiated. 
+	 * 				(Even if all methods are concrete)
+	 * 
+	 * 				A class cannot extend multiple parent abstract classes!
+	 * 			
 	 */
 	
-	public static void main(String[] args) {
+	public static void main(String... args) {
 		
 		Animal a = new Animal("Animal",1.0,1); //Does not have access to its child methods or states!
 //		a.makeNoise();
@@ -95,7 +154,32 @@ public class MainDriver {
 //		account.balance = -100;
 		account.setBalance(-100);
 		
+		account.toString(); //converts into a string. 
+		
 		System.out.println(account.getBalance());
+		
+		
+		Car car = new PhongsCar();
+		
+		car = new ToyotaCar();
+		
+		Truck t = new ToyotaCar();
+		
+		car.accelerate();
+		car.brake();
+		car.steer();
+		car.refuel();
+		
+		
+		BensCar bcar = new CompletedCar();
+		
+		bcar.toString();
+		
+		
+		
+		//Stack and the Heap 
+		//Reference vs primitive variables!
+		//var args
 		
 	}
 
