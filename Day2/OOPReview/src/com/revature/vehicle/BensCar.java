@@ -1,6 +1,6 @@
 package com.revature.vehicle;
 
-public abstract class BensCar implements Car{
+public abstract class BensCar extends Object implements Car{
 
 	@Override
 	public boolean brake() {
