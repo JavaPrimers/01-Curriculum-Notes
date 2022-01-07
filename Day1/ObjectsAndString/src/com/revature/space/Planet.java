@@ -14,6 +14,7 @@ public class Planet {
 		super();
 		this.name = name;
 		this.mass = mass;
+		System.out.println("Made a new planet!");
 	}
 	public String getName() {
 		return name;
@@ -31,6 +32,19 @@ public class Planet {
 	@Override
 	public String toString() {
 		return "I am a planet, my name is: " + this.name + " and my mass is: "+ this.mass;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		
+		if(obj instanceof Planet) { //We're checking if it's actually a planet!
+			Planet p = (Planet) obj; //we're explicitly turning this into a planet!
+				
+			if(this.name.equals(p.name) && this.mass == p.mass) { //if the attributes match!
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	
