@@ -47,6 +47,10 @@ public class Planet {
 		return false;
 	}
 	
+	@Override
+	protected void finalize() {
+		System.out.println("I'm being destroyed!");
+	}
 	
 	
 
