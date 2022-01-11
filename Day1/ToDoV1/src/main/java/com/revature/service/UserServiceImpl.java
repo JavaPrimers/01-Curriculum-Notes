@@ -37,4 +37,10 @@ public class UserServiceImpl implements UserService {
 		return u;
 	}
 
+	@Override
+	public boolean addTodo(User currentUser, ToDo todo) {
+		currentUser.getUserToDoList().add(todo);
+		return true;
+	}
+
 }
